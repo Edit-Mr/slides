@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="utf-8" />
+        <title>2025 中部電資聯合暑訓《資難而上》</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../plugin/reset.css" />
+        <link rel="stylesheet" href="../plugin/reveal.css" />
+        <link rel="stylesheet" href="../plugin/black.css" id="theme" />
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="../plugin/monokai.css" />
+        <style>
+            :root {
+                --r-heading-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                --r-main-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+            .reveal pre code {
+                padding: 1rem;
+            }
+            .reveal code:not([data-highlighted="yes"]) {
+                background-color: #373737;
+                color: #f8f8f2;
+                padding: 0.3rem 0.5rem;
+                border-radius: 0.3em;
+            }
+            .reveal h1,
+            .reveal h2,
+            .reveal h3,
+            .reveal h4,
+            .reveal h5 {
+                text-transform: none;
+            }
+            p,li{
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown="" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+            </div>
+        </div>
+
+        <script src="../plugin/reveal.js"></script>
+        <script src="../plugin/zoom.js"></script>
+        <script src="../plugin/notes.js"></script>
+        <script src="../plugin/search.js"></script>
+        <script src="../plugin/markdown.js"></script>
+        <script src="../plugin/highlight.js"></script>
+        <script>
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            const course = getQueryParam("course");
+            // redirect to home page if course is not provided
+            if (!course) {
+                window.location.href = "../";
+            }
+            const markdownFile = `../slides/${course}.md`;
+
+            document.querySelector("section").setAttribute("data-markdown", markdownFile);
+
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+            });
+        </script>
+    </body>
+</html>
