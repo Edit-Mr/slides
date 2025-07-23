@@ -30,8 +30,18 @@
             .reveal h5 {
                 text-transform: none;
             }
-            p,li{
+            p,
+            li {
                 font-size: 2rem;
+            }
+            li {
+                line-height: 168%;
+            }
+            .reveal blockquote {
+                margin: 2rem auto;
+            }
+            blockquote p {
+                font-size: 1.5rem;
             }
         </style>
     </head>
@@ -59,7 +69,7 @@
             if (!course) {
                 window.location.href = "../";
             }
-            const markdownFile = `../slides/${course}.md`;
+            const markdownFile = `${course}.md`;
 
             document.querySelector("section").setAttribute("data-markdown", markdownFile);
 

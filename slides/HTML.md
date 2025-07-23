@@ -1,26 +1,23 @@
 # HTML
 
-毛哥 EM・資難而上 <!-- .element: style="font-size:1.5rem;margin:1em" -->
+毛哥 EM <!-- .element: style="font-size:1.5rem;margin:1em" -->
 
 ---
 
-<div style="font-size:1.5rem;width:50%">
+<div style="font-size:1.5rem;width:60%">
 
 <!-- .slide: data-background-image="https://raw.githubusercontent.com/Edit-Mr/Edit-Mr/main/avatar.webp" data-background-opacity="1" data-background-size="30%" data-background-position="80% 50%" data-transition="zoom" -->
 
-關於我 <!-- .element: style=font-size:1.2rem;margin:1em -->
+_關於我_ <!-- .element: style="font-size:1.2rem;margin:-.5rem 1rem 1rem" -->
 
-## 毛哥 EM
+## 毛哥 EM<!-- .element: style="font-size:3.3rem;" -->
 
-_全端工程 | 英文辯論_ <!-- .element: style="font-size:1.2rem;margin:-.5rem 1rem 1rem" -->
 
--   ⻄苑高中高三 ⇀ 交大資工
--   中電會第三屆資訊組組長
--   SITCON 2024 / 2025 / Camp 2025 講師
--   九年網頁開發經驗
--   Awwwards 常態評審
+-   九年網頁開發經驗<!-- .element: style="font-size:1.75rem;margin-top:1rem" -->
+-   Awwwards 常態評審<!-- .element: style="font-size:1.75rem;" -->
+-   英文辯士<!-- .element: style="font-size:1.75rem;" -->
 
-</div>
+</div></div>
 
 ---
 
@@ -100,7 +97,7 @@ _網站講白就是要用瀏覽器打開的 Word 檔_
 
 ## >< 好麻煩 /
 
----
+--
 
 ## emmet
 
@@ -167,7 +164,7 @@ H<sup>+</sup> CO<sub>2</sub>
 
 </div>
 </div>
----
+--
 
 ## 有序清單
 
@@ -191,7 +188,7 @@ H<sup>+</sup> CO<sub>2</sub>
 
 </div>
 </div>
----
+--
 
 ## 清單清單
 
@@ -234,7 +231,7 @@ H<sup>+</sup> CO<sub>2</sub>
 [Google](https://www.google.com)
 
 
----
+--
 
 ### 新分頁開啟
 
@@ -475,3 +472,15 @@ emmet: `!` + `tab`
 <img src="../test/images/logo.png" />
 <!-- 上一層目錄下的圖片檔案 -->
 ```
+
+<!-- .slide: data-transition="fade-out" -->
+---
+
+<!-- .slide: data-transition="fade-in" -->
+
+本投影片由 [毛哥EM](https://elvismao.com/) 製作  
+採用創用 CC「[姓名標示 4.0 國際](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)」授權
+
+![CC](cc.svg)
+
+更多網頁設計技巧歡迎至 [毛哥EM資訊密技](https://emtech.cc/category/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC)

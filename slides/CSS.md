@@ -1,6 +1,6 @@
 # CSS
 
-毛哥 EM
+毛哥EM
 
 ---
 
@@ -551,14 +551,19 @@ background: radial-gradient(ellipse at center, 顏色1, 顏色2);
 
 玩得開心 (:
 
-<div style=font-size:1.5rem>
+學習更多：<https://emtech.cc/p/webpallet-3>
 
-[GitHub](https://github.com/Edit-Mr) · [Instagram](https://instagram.com/elvisdragonmao) · [毛哥 EM 資訊密技](https://emtech.cc/)
+Flex：<https://emtech.cc/p/2023ironman-3>
 
-</div>
-
-
+<!-- .slide: data-transition="fade-out" -->
 ---
 
-學習更多：<https://emtech.cc/p/webpallet-3>
-Flex：<https://emtech.cc/p/2023ironman-3>
+
+<!-- .slide: data-transition="fade-in" -->
+
+本投影片由 [毛哥EM](https://elvismao.com/) 製作  
+採用創用 CC「[姓名標示 4.0 國際](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)」授權
+
+![CC](cc.svg)
+
+更多網頁設計技巧歡迎至 [毛哥EM資訊密技](https://emtech.cc/category/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC)
