@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
     <head>
         <meta charset="utf-8" />
-        <title>2025 中部電資聯合暑訓《資難而上》</title>
+        <title>毛哥EM 簡報公開</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../plugin/reset.css" />
         <link rel="stylesheet" href="../plugin/reveal.css" />
@@ -70,6 +70,9 @@
                 window.location.href = "../";
             }
             const markdownFile = `${course}.md`;
+
+            // set title to course name
+            document.title = `${course} | 毛哥EM 簡報公開`;
 
             document.querySelector("section").setAttribute("data-markdown", markdownFile);
 
