@@ -566,4 +566,4 @@ Flex：<https://emtech.cc/p/2023ironman-3>
 
 ![CC](cc.svg)
 
-更多網頁設計技巧歡迎至 [毛哥EM資訊密技](https://emtech.cc/category/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC)
+[毛哥EM資訊密技](https://emtech.cc/)・[毛哥EM公開簡報](https://g.elvismao.com/slides)

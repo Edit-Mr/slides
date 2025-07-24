@@ -6,6 +6,13 @@
 
 ---
 
+文章教學：
+
+https://emtech.cc/p/github-and-git/
+<!-- .slide: data-transition="fade" -->
+
+---
+
 <!-- .slide: data-transition="none fade-in" -->
 
 你們用過 Git / GitHub 嗎？
@@ -111,9 +118,35 @@ introducing
 
 ---
 
+## 版本控制類型
+
+-   本地端版本控制（Local VCS）
+-   集中式版本控制（CVCS）
+-   分散式版本控制（DVCS）
+
+---
+
 ## Git 的邏輯
 
 我們來畫張圖，Git 就像是在寄包裹。
+
+--
+
+你也可以想像 Github 是物流中心，而 git 就是物流。我們透過物流來傳資料到 Github 的倉庫合獲取檔案。git 厲害的地方是每次上傳或下載時它會比較差異，只傳送不同的檔案。除了節省時間流量之外，因為記錄了每一次的更動，所以可以進行版本控制。包括釋出不同版本，和復原到指定版本。
+
+--
+
+- 如果要從網上下載下來檔案我們要 `clone`（複製）下來
+- 如果 `clone` 之後有更新的版本想下載直接 `pull` 就會把新增的東西下載下來。
+
+--
+
+而要上傳檔案就像剛才說寄包裹一樣。
+
+- 我們要先填寫寄信人（我們）的資訊，還有收件人的地址（網址）。這個只需要寫一次就可以了
+- 接下來我們要 `add`（選擇）要傳送的資料。通常會選擇傳送所有你編輯過的地方。
+- 選好之後我們到把包裹 `commit`（打包起來），並留下一串訊息（必填，簡單講你做了什麼編輯，之後比較好看）
+- 最後把它 `push`（寄）出去就好囉
 
 ---
 
@@ -145,6 +178,8 @@ git config --global user.email "you@example.com"
 ## GitHub 是什麼？
 
 ☁️ 線上 Git 倉庫平台
+
+工程師的 Facebook／雲端硬碟
 
 -   團隊協作
 -   Issue / Pull Request
@@ -303,4 +338,4 @@ git pull
 
 ![CC](cc.svg)
 
-更多網頁設計技巧歡迎至 [毛哥EM資訊密技](https://emtech.cc/category/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC)
+[毛哥EM資訊密技](https://emtech.cc/)・[毛哥EM公開簡報](https://g.elvismao.com/slides)
