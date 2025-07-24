@@ -2,20 +2,10 @@
 
 By 毛哥EM
 
-## 簡報連結
 
-### 基礎網頁設計（本倉庫 Reveal.js）
+## Reveal.js 簡報
 
-- [HTML](https://g.elvismao.com/slides/view?course=HTML)
-- [CSS](https://g.elvismao.com/slides/view?course=CSS)
-- [Git & Github](https://g.elvismao.com/slides/view?course=Git)
-
-
-
-
-## 本地編輯簡報
-
-這裡的簡報都是使用 Reveal.js，就是 HackMD 用的那個。
+放在資料夾 view 的簡報都是使用 Reveal.js，就是 HackMD 用的那個。打開的方式是開啟 `/view/index.html?course=xxx`，其中 `xxx` 是簡報的名稱（Markdown 檔案名稱）。
 
 網頁全是靜態資源，撰寫時可使用任意 HTTP 伺服器。如 VSCode Live Server、Python SimpleHTTPServer、Node.js http-server 等。甚至直接點開 HTML 檔案也行。
 
