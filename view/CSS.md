@@ -8,7 +8,7 @@
 
 主要功能:美觀網站
 
-![](../slides/img/CSS/骨架、外觀、行為.png) <!-- .element: height="400px" -->
+![](img/CSS/骨架、外觀、行為.png) <!-- .element: height="400px" -->
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -171,13 +171,13 @@ background-position: 20% 40%; /*從左上開始算*/
 
 `background-size: contain;`
 
-<video style="width:100%;height:300px;border:2px solid #FFF" data-autoplay loop src="../slides/img/CSS/long.webp"></video></div>
+<video style="width:100%;height:300px;border:2px solid #FFF" data-autoplay loop src="img/CSS/long.webp"></video></div>
 
 <div style="flex:1;font-size:1rem">
 
 `background-size: cover;`
 
-<video style="width:100%;height:300px;border:2px solid #FFF;object-fit: cover;object-position: top;" data-autoplay loop src="../slides/img/CSS/long.webp"></video></div>
+<video style="width:100%;height:300px;border:2px solid #FFF;object-fit: cover;object-position: top;" data-autoplay loop src="img/CSS/long.webp"></video></div>
 
 </div>
 
@@ -326,7 +326,7 @@ viewport（視口）寬/長度
 
 ## 間距
 
-<!-- .slide: data-background-image="../slides/img/CSS/toilet.webp" data-background-opacity="0.4" -->
+<!-- .slide: data-background-image="img/CSS/toilet.webp" data-background-opacity="0.4" -->
 
 --
 
@@ -412,15 +412,15 @@ padding: 10px 20px 30px 40px; /* 上右下左 */
 
 ## box-sizing
 
-<!-- .slide: data-background-image="../slides/img/CSS/box-sizing.webp" data-background-opacity="0.4" data-auto-animate -->
+<!-- .slide: data-background-image="img/CSS/box-sizing.webp" data-background-opacity="0.4" data-auto-animate -->
 
 --
 
-<!-- .slide: data-background-image="../slides/img/CSS/box-sizing.webp" data-background-opacity="1" data-auto-animate -->
+<!-- .slide: data-background-image="img/CSS/box-sizing.webp" data-background-opacity="1" data-auto-animate -->
 
 --
 
-<!-- .slide: data-background-image="../slides/img/CSS/box-sizing.webp" data-background-opacity="0.4" data-auto-animate -->
+<!-- .slide: data-background-image="img/CSS/box-sizing.webp" data-background-opacity="0.4" data-auto-animate -->
 
 ### box 是什麼?
 

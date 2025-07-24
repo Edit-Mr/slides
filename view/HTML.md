@@ -33,7 +33,7 @@ _網站講白就是要用瀏覽器打開的 Word 檔_
 
 超文本標記語言 HyperText Markup Language  
 作為網站的骨架  
-![](../slides/img/HTML/骨架、外觀、行為.png) <!-- .element: height="400px" -->
+![](img/HTML/骨架、外觀、行為.png) <!-- .element: height="400px" -->
 
 ---
 
@@ -56,7 +56,7 @@ _網站講白就是要用瀏覽器打開的 Word 檔_
 ## 元素
 
 網站所有東西都是由元素組成
-![ ](../slides/img/HTML/element.svg) <!-- .element: style="filter:invert(1);" -->
+![ ](img/HTML/element.svg) <!-- .element: style="filter:invert(1);" -->
 
 ---
 
@@ -416,26 +416,26 @@ H<sup>+</sup> CO<sub>2</sub>
 
 ## 視覺化工作室程式碼
 
-![](../slides/img/HTML/download.webp) <!-- .element: height="400px" -->
+![](img/HTML/download.webp) <!-- .element: height="400px" -->
 
 --
 
 ### 開啟資料夾
 
-![](../slides/img/HTML/folder.webp)
+![](img/HTML/folder.webp)
 
 --
 
 ### 安裝擴充功能
 
-![](../slides/img/HTML/live.webp)
+![](img/HTML/live.webp)
 
 
 --
 
 ### 建立第一個網頁
 
-![](../slides/img/HTML/file.webp)
+![](img/HTML/file.webp)
 
 ---
 

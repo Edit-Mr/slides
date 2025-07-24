@@ -29,27 +29,26 @@
 --
 
 
-<!-- .slide: data-transition="none" -->
 
-![](folder-1.png)
-
---
-
-<!-- .slide: data-transition="none" -->
-
-![](folder-2.png)
+![](img/Git/folder-1.webp)
 
 --
 
 <!-- .slide: data-transition="none" -->
 
-![](folder-3.png)
+![](img/Git/folder-2.webp)
 
 --
 
 <!-- .slide: data-transition="none" -->
 
-![](folder-4.png)
+![](img/Git/folder-3.webp)
+
+--
+
+<!-- .slide: data-transition="none" -->
+
+![](img/Git/folder-4.webp)
 
 --
 
