@@ -1,507 +1,512 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>毛哥EM公開簡報</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>毛哥EM公開簡報</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-            body {
-                font-family: system-ui, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-                color: #ffffff;
-                min-height: 100vh;
-                overflow-x: hidden;
-                position: relative;
-            }
+      body {
+        font-family: system-ui, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+        color: #ffffff;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+      }
 
-            body::before {
-                content: "";
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-                pointer-events: none;
-                z-index: -1;
-                animation: float 20s ease-in-out infinite;
-            }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: -1;
+        animation: float 20s ease-in-out infinite;
+      }
 
-            @keyframes float {
-                0%,
-                100% {
-                    transform: translateY(0px) rotate(0deg);
-                }
-                50% {
-                    transform: translateY(-20px) rotate(1deg);
-                }
-            }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(1deg);
+        }
+      }
 
-            .container {
-                max-width: 1400px;
-                margin: 0 auto;
-                padding: 3rem 2rem;
-                position: relative;
-                z-index: 1;
-            }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        position: relative;
+        z-index: 1;
+      }
 
-            .header {
-                text-align: center;
-                margin-bottom: 4rem;
-                position: relative;
-            }
+      .header {
+        text-align: center;
+        margin-bottom: 4rem;
+        position: relative;
+      }
 
-            .header h1 {
-                font-size: 4rem;
-                font-weight: 700;
-                background: linear-gradient(135deg, #4f70ff 0%, #ce9fff 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                margin-bottom: 1rem;
-                /* text-shadow: 0 0 30px rgba(71, 89, 173, 0.5); */
-                animation: glow 3s ease-in-out infinite alternate;
-            }
+      .header h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #4f70ff 0%, #ce9fff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        /* text-shadow: 0 0 30px rgba(71, 89, 173, 0.5); */
+        animation: glow 3s ease-in-out infinite alternate;
+      }
 
-            @keyframes glow {
-                from {
-                    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
-                }
-                to {
-                    filter: drop-shadow(0 0 30px rgba(118, 75, 162, 0.8));
-                }
-            }
+      @keyframes glow {
+        from {
+          filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        }
+        to {
+          filter: drop-shadow(0 0 30px rgba(118, 75, 162, 0.8));
+        }
+      }
 
-            .header p {
-                font-size: 1.3rem;
-                color: #b8b8b8;
-                font-weight: 300;
-                line-height: 1.5;
-            }
+      .header p {
+        font-size: 1.3rem;
+        color: #b8b8b8;
+        font-weight: 300;
+        line-height: 1.5;
+      }
 
-            .filter-container {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-                margin-bottom: 3rem;
-                flex-wrap: wrap;
-            }
+      .filter-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
 
-            .filter-btn {
-                padding: 0.8rem 2rem;
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 50px;
-                color: #ffffff;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                backdrop-filter: blur(10px);
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-size: 0.9rem;
-            }
+      .filter-btn {
+        padding: 0.8rem 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+      }
 
-            .filter-btn:hover,
-            .filter-btn.active {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                border-color: #667eea;
-                transform: translateY(-2px);
-                box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-color: #667eea;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      }
 
-            .slides-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-                gap: 2rem;
-                margin-top: 2rem;
-            }
+      .slides-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
 
-            .slide-card {
-                background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 20px;
-                padding: 2rem;
-                backdrop-filter: blur(20px);
-                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-                position: relative;
-                overflow: hidden;
-                animation: fadeInUp 0.6s ease-out;
-            }
+      .slide-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(20px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 0.6s ease-out;
+      }
 
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            .slide-card::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 4px;
-                background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f7cbd1, #f093fb, #764ba2, #667eea);
-                background-size: 200% 100%;
-                animation: shimmer 8s linear infinite;
-            }
+      .slide-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f7cbd1, #f093fb, #764ba2, #667eea);
+        background-size: 200% 100%;
+        animation: shimmer 8s linear infinite;
+      }
 
-            @keyframes shimmer {
-                0% {
-                    background-position: -200% 0;
-                }
-                100% {
-                    background-position: 0% 0;
-                }
-            }
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 0% 0;
+        }
+      }
 
-            .slide-card:hover {
-                transform: translateY(-10px) scale(1.02);
-                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-                border-color: rgba(255, 255, 255, 0.3);
-                background: rgba(255, 255, 255, 0.08);
-            }
+      .slide-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.08);
+      }
 
-            .slide-card h3 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                margin-bottom: 0.5rem;
-                color: #ffffff;
-                line-height: 1.3;
-            }
+      .slide-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        line-height: 1.3;
+      }
 
-            .slide-card p {
-                margin-bottom: 0.5rem;
-                color: #fff;
-            }
+      .slide-card p {
+        margin-bottom: 0.5rem;
+        color: #fff;
+      }
 
-            .slide-category {
-                display: inline-block;
-                padding: 0.3rem 1rem;
-                background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
-                border: 1px solid rgba(102, 126, 234, 0.5);
-                border-radius: 20px;
-                font-size: 0.8rem;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                margin-bottom: 1rem;
-                color: #c8d4ff;
-            }
+      .slide-category {
+        display: inline-block;
+        padding: 0.3rem 1rem;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+        border: 1px solid rgba(102, 126, 234, 0.5);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1rem;
+        color: #c8d4ff;
+      }
 
-            .slide-card .slide-description {
-                color: #b8b8b8;
-                font-size: 1rem;
-                line-height: 1.6;
-                margin-bottom: 1.5rem;
-            }
+      .slide-card .slide-description {
+        color: #b8b8b8;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
 
-            .slide-link {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-                padding: 0.8rem 1.5rem;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: #ffffff;
-                text-decoration: none;
-                border-radius: 50px;
-                font-weight: 600;
-                transition: all 0.3s ease;
-                position: relative;
-                overflow: hidden;
-            }
+      .slide-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
 
-            .slide-link::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-                transition: left 0.5s;
-            }
+      .slide-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+      }
 
-            .slide-link:hover::before {
-                left: 100%;
-            }
+      .slide-link:hover::before {
+        left: 100%;
+      }
 
-            .slide-link:hover {
-                transform: translateX(5px);
-                box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-            }
+      .slide-link:hover {
+        transform: translateX(5px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      }
 
-            .slide-link::after {
-                content: "→";
-                font-size: 1.2rem;
-                transition: transform 0.3s ease;
-            }
+      .slide-link::after {
+        content: "→";
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+      }
 
-            .slide-link:hover::after {
-                transform: translateX(3px);
-            }
+      .slide-link:hover::after {
+        transform: translateX(3px);
+      }
 
-            .stats {
-                display: flex;
-                justify-content: center;
-                gap: 3rem;
-                margin: 4rem 0;
-                flex-wrap: wrap;
-            }
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 4rem 0;
+        flex-wrap: wrap;
+      }
 
-            .stat-item {
-                text-align: center;
-                padding: 1.5rem;
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 15px;
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                min-width: 150px;
-            }
+      .stat-item {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-width: 150px;
+      }
 
-            .stat-number {
-                font-size: 2.5rem;
-                font-weight: 700;
-                background: linear-gradient(135deg, #b2c0ff 0%, #8b2aef 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-            }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #b2c0ff 0%, #8b2aef 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-            .stat-label {
-                color: #b8b8b8;
-                font-size: 0.9rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-top: 0.5rem;
-            }
+      .stat-label {
+        color: #b8b8b8;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+      }
 
-            @media (max-width: 768px) {
-                .header h1 {
-                    font-size: 2.5rem;
-                }
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.5rem;
+        }
 
-                .slides-grid {
-                    grid-template-columns: 1fr;
-                    gap: 1.5rem;
-                }
+        .slides-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
 
-                .filter-container {
-                    gap: 0.5rem;
-                }
+        .filter-container {
+          gap: 0.5rem;
+        }
 
-                .filter-btn {
-                    padding: 0.6rem 1.5rem;
-                    font-size: 0.8rem;
-                }
+        .filter-btn {
+          padding: 0.6rem 1.5rem;
+          font-size: 0.8rem;
+        }
 
-                .stats {
-                    gap: 1.5rem;
-                }
-            }
+        .stats {
+          gap: 1.5rem;
+        }
+      }
 
-            .hidden {
-                display: none !important;
-            }
-            a {
-                color: inherit;
-            }
+      .hidden {
+        display: none !important;
+      }
+      a {
+        color: inherit;
+      }
 
-            footer {
-                text-align: center;
-                padding: 0 1rem 2rem;
-                font-size: 0.9rem;
-                color: #7e7e7e;
-                position: relative;
-                z-index: 1;
-            }
-        </style>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R5PZG2VQG" />
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "G-9R5PZG2VQG");
-        </script>
-        <script src="https://font.emtech.cc/emfont.js"></script>
-    </head>
-    <body class="emfont-GenYoMinTC">
-        <div class="container">
-            <header class="header">
-                <h1 class="emfont-NotoSansTC-700">毛哥EM公開簡報</h1>
-                <p>簡報均採用創用 CC「<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">姓名標示 4.0 國際</a>」授權<br />部分會重複使用，持續更新</p>
-            </header>
+      footer {
+        text-align: center;
+        padding: 0 1rem 2rem;
+        font-size: 0.9rem;
+        color: #7e7e7e;
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R5PZG2VQG" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-9R5PZG2VQG");
+    </script>
+    <script src="https://font.emtech.cc/emfont.js"></script>
+  </head>
+  <body class="emfont-GenYoMinTC">
+    <div class="container">
+      <header class="header">
+        <h1 class="emfont-NotoSansTC-700">毛哥EM公開簡報</h1>
+        <p>簡報均採用創用 CC「<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">姓名標示 4.0 國際</a>」授權<br />部分會重複使用，持續更新</p>
+      </header>
 
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number emfont-NotoSansTC-700" id="totalSlides"></div>
-                    <div class="stat-label">簡報數</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number emfont-NotoSansTC-700" id="totalCategories"></div>
-                    <div class="stat-label">分類數</div>
-                </div>
-            </div>
-
-            <div class="filter-container">
-                <button class="filter-btn active" data-category="all">所有分類</button>
-                <button class="filter-btn" data-category="web">網頁開發</button>
-                <button class="filter-btn" data-category="software">軟體開發</button>
-                <button class="filter-btn" data-category="design">設計</button>
-                <button class="filter-btn" data-category="oss">開源社群</button>
-            </div>
-
-            <div class="slides-grid" id="slidesGrid">
-                <div class="slide-card" data-category="web">
-                    <div class="slide-category">網頁開發</div>
-                    <h3>HTML</h3>
-                    <p class="slide-description">網頁標記語言基礎，學習如何建構網頁內容與結構。</p>
-                    <a href="https://g.elvismao.com/slides/view?course=HTML" class="slide-link" target="_blank">線上簡報</a>
-                </div>
-
-                <div class="slide-card" data-category="web">
-                    <div class="slide-category">網頁開發</div>
-                    <h3>CSS 基礎</h3>
-                    <p class="slide-description">網頁樣式與排版，學習如何設計美觀的網頁界面。</p>
-                    <a href="https://g.elvismao.com/slides/view?course=CSS" class="slide-link" target="_blank">線上簡報</a>
-                </div>
-
-                <div class="slide-card" data-category="software">
-                    <div class="slide-category">軟體開發</div>
-                    <h3>Git & Github 基礎</h3>
-                    <p class="slide-description">版本控制與協作平台，學習如何管理程式碼與團隊協作。</p>
-                    <a href="https://g.elvismao.com/slides/view?course=Git" class="slide-link" target="_blank">線上簡報</a>
-                </div>
-
-                <div class="slide-card" data-category="web">
-                    <div class="slide-category">網頁開發</div>
-                    <h3>不止於 CSS</h3>
-                    <p>SITCON Camp 2025 廣度課程</p>
-                    <p class="slide-description">如何做出 prompt 不出來的驚豔網頁，如何讓一個好的想法被呈現，AI 現階段可以做什麼，不能做什麼，如何與他合作，以及我們需要具備哪些能力。</p>
-                    <a href="https://drive.google.com/file/d/1qfrVtTxxaU6qXNbH8OJbj2pblkwEY5zI/view?usp=sharing" class="slide-link" target="_blank">Drive</a>
-                </div>
-                <div class="slide-card" data-category="web">
-                    <div class="slide-category">網頁開發</div>
-                    <h3>前端特效：不都國中數學</h3>
-                    <p>SITCON 2025</p>
-                    <p class="slide-description">
-                        在這場議程中我要邀請你跳脫傳統框架的束縛。捨棄繁雜的工具，我將帶領大家使用純 CSS 和 JavaScript，結合國中數學的基礎邏輯，深入剖析那些令人驚豔的視覺效果。
-                    </p>
-                    <a href="https://sitcon.org/2025/agenda/aa71e5/" class="slide-link" target="_blank">SITCON 官網</a>
-                </div>
-                <div class="slide-card" data-category="software">
-                    <div class="slide-category">軟體開發</div>
-                    <h3>從捷徑到終端機，iPhone 的程式之旅</h3>
-                    <p>SITCON 2024</p>
-                    <p class="slide-description">從捷徑、Scriptable、到 a-shell，從 JavaScript 到 Python。讓你發現你的程式能力與創意，加上 iPhone 人性化的設計可以創造的無限可能。</p>
-                    <a href="https://sitcon.org/2024/agenda/e40b24/" class="slide-link" target="_blank">SITCON 官網</a>
-                </div>
-                <div class="slide-card" data-category="oss">
-                    <div class="slide-category">開源社群</div>
-                    <h3>前往自由的路上 - 中電喵的開源之旅</h3>
-                    <p>COSCUP 2024</p>
-                    <p class="slide-description">中電會這一年都在幹嘛，這些專案如何支持獨立開發者及學生，解救中電會差點破產的窘境，以及如何在看起來很炫砲的同時大幅簡化了我們的工作流程。</p>
-                    <a href="https://github.com/Edit-Mr/slides/releases/tag/COSCUP2025" class="slide-link" target="_blank">GitHub</a>
-                </div>
-                <div class="slide-card" data-category="design">
-                    <div class="slide-category">設計</div>
-                    <h3>基礎平面設計</h3>
-                    <p>中電會 2024 幹部訓練 / 2025 暑訓</p>
-                    <p class="slide-description">一些簡單通用的設計法則。</p>
-                    <a href="https://github.com/Edit-Mr/slides/releases/tag/SCAICT2025" class="slide-link" target="_blank">Figma</a>
-                </div>
-            </div>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number emfont-NotoSansTC-700" id="totalSlides"></div>
+          <div class="stat-label">簡報數</div>
         </div>
-        <footer>© 2025 by <a href="https://elvismao.com">Elvis Mao</a></footer>
-        <script>
-            // Filter functionality
-            const filterButtons = document.querySelectorAll(".filter-btn");
-            const slideCards = document.querySelectorAll(".slide-card");
+        <div class="stat-item">
+          <div class="stat-number emfont-NotoSansTC-700" id="totalCategories"></div>
+          <div class="stat-label">分類數</div>
+        </div>
+      </div>
 
-            filterButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove("active"));
-                    // Add active class to clicked button
-                    button.classList.add("active");
+      <div class="filter-container">
+        <button class="filter-btn active" data-category="all">所有分類</button>
+        <button class="filter-btn" data-category="web">網頁開發</button>
+        <button class="filter-btn" data-category="software">軟體開發</button>
+        <button class="filter-btn" data-category="design">設計</button>
+        <button class="filter-btn" data-category="oss">開源社群</button>
+      </div>
 
-                    const category = button.dataset.category;
+      <div class="slides-grid" id="slidesGrid">
+        <div class="slide-card" data-category="software">
+          <div class="slide-category">軟體開發</div>
+          <h3>GitHub Actions</h3>
+          <p class="slide-description">GitHub Actions 是一個強大的自動化平台，幫助你實現持續整合與持續部署。</p>
+          <a href="https://g.elvismao.com/slides/view?course=Actions" class="slide-link" target="_blank">線上簡報</a>
+        </div>
 
-                    slideCards.forEach(card => {
-                        if (category === "all" || card.dataset.category === category) {
-                            card.classList.remove("hidden");
-                            card.style.animation = "fadeInUp 0.6s ease-out";
-                        } else {
-                            card.classList.add("hidden");
-                        }
-                    });
+        <div class="slide-card" data-category="web">
+          <div class="slide-category">網頁開發</div>
+          <h3>HTML</h3>
+          <p class="slide-description">網頁標記語言基礎，學習如何建構網頁內容與結構。</p>
+          <a href="https://g.elvismao.com/slides/view?course=HTML" class="slide-link" target="_blank">線上簡報</a>
+        </div>
 
-                    updateStats();
-                });
-            });
+        <div class="slide-card" data-category="web">
+          <div class="slide-category">網頁開發</div>
+          <h3>CSS 基礎</h3>
+          <p class="slide-description">網頁樣式與排版，學習如何設計美觀的網頁界面。</p>
+          <a href="https://g.elvismao.com/slides/view?course=CSS" class="slide-link" target="_blank">線上簡報</a>
+        </div>
 
-            // Update statistics
-            function updateStats() {
-                const visibleSlides = document.querySelectorAll(".slide-card:not(.hidden)");
-                const categories = new Set();
+        <div class="slide-card" data-category="software">
+          <div class="slide-category">軟體開發</div>
+          <h3>Git & Github 基礎</h3>
+          <p class="slide-description">版本控制與協作平台，學習如何管理程式碼與團隊協作。</p>
+          <a href="https://g.elvismao.com/slides/view?course=Git" class="slide-link" target="_blank">線上簡報</a>
+        </div>
 
-                visibleSlides.forEach(slide => {
-                    categories.add(slide.dataset.category);
-                });
+        <div class="slide-card" data-category="web">
+          <div class="slide-category">網頁開發</div>
+          <h3>不止於 CSS</h3>
+          <p>SITCON Camp 2025 廣度課程</p>
+          <p class="slide-description">如何做出 prompt 不出來的驚豔網頁，如何讓一個好的想法被呈現，AI 現階段可以做什麼，不能做什麼，如何與他合作，以及我們需要具備哪些能力。</p>
+          <a href="https://drive.google.com/file/d/1qfrVtTxxaU6qXNbH8OJbj2pblkwEY5zI/view?usp=sharing" class="slide-link" target="_blank">Drive</a>
+        </div>
+        <div class="slide-card" data-category="web">
+          <div class="slide-category">網頁開發</div>
+          <h3>前端特效：不都國中數學</h3>
+          <p>SITCON 2025</p>
+          <p class="slide-description">在這場議程中我要邀請你跳脫傳統框架的束縛。捨棄繁雜的工具，我將帶領大家使用純 CSS 和 JavaScript，結合國中數學的基礎邏輯，深入剖析那些令人驚豔的視覺效果。</p>
+          <a href="https://sitcon.org/2025/agenda/aa71e5/" class="slide-link" target="_blank">SITCON 官網</a>
+        </div>
+        <div class="slide-card" data-category="software">
+          <div class="slide-category">軟體開發</div>
+          <h3>從捷徑到終端機，iPhone 的程式之旅</h3>
+          <p>SITCON 2024</p>
+          <p class="slide-description">從捷徑、Scriptable、到 a-shell，從 JavaScript 到 Python。讓你發現你的程式能力與創意，加上 iPhone 人性化的設計可以創造的無限可能。</p>
+          <a href="https://sitcon.org/2024/agenda/e40b24/" class="slide-link" target="_blank">SITCON 官網</a>
+        </div>
+        <div class="slide-card" data-category="oss">
+          <div class="slide-category">開源社群</div>
+          <h3>前往自由的路上 - 中電喵的開源之旅</h3>
+          <p>COSCUP 2024</p>
+          <p class="slide-description">中電會這一年都在幹嘛，這些專案如何支持獨立開發者及學生，解救中電會差點破產的窘境，以及如何在看起來很炫砲的同時大幅簡化了我們的工作流程。</p>
+          <a href="https://github.com/Edit-Mr/slides/releases/tag/COSCUP2025" class="slide-link" target="_blank">GitHub</a>
+        </div>
+        <div class="slide-card" data-category="design">
+          <div class="slide-category">設計</div>
+          <h3>基礎平面設計</h3>
+          <p>中電會 2024 幹部訓練 / 2025 暑訓</p>
+          <p class="slide-description">一些簡單通用的設計法則。</p>
+          <a href="https://github.com/Edit-Mr/slides/releases/tag/SCAICT2025" class="slide-link" target="_blank">Figma</a>
+        </div>
+      </div>
+    </div>
+    <footer>© 2025 by <a href="https://elvismao.com">Elvis Mao</a></footer>
+    <script>
+      // Filter functionality
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const slideCards = document.querySelectorAll(".slide-card");
 
-                document.getElementById("totalSlides").textContent = visibleSlides.length;
-                document.getElementById("totalCategories").textContent = categories.size;
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          const category = button.dataset.category;
+
+          slideCards.forEach(card => {
+            if (category === "all" || card.dataset.category === category) {
+              card.classList.remove("hidden");
+              card.style.animation = "fadeInUp 0.6s ease-out";
+            } else {
+              card.classList.add("hidden");
             }
-            updateStats();
-            // Add stagger animation to cards on load
-            slideCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-            });
+          });
 
-            // Smooth scrolling for internal links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute("href"));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                        });
-                    }
-                });
-            });
+          updateStats();
+        });
+      });
 
-            // add class emfont-NotoSansTC-700 to all h3,.slide-link
-            document.querySelectorAll("h3").forEach(h3 => {
-                h3.classList.add("emfont-NotoSansTC-700");
-            });
-            document.querySelectorAll(".slide-link").forEach(link => {
-                link.classList.add("emfont-NotoSansTC-500");
-            });
-            document.querySelectorAll(".slide-category").forEach(category => {
-                category.classList.add("emfont-NotoSansTC-400");
-            });
-            document.querySelectorAll(".slide-card h3 + p").forEach(p => {
-                p.classList.add("emfont-NotoSansTC-400");
-            });
+      // Update statistics
+      function updateStats() {
+        const visibleSlides = document.querySelectorAll(".slide-card:not(.hidden)");
+        const categories = new Set();
 
-            emfont.init();
-        </script>
-    </body>
+        visibleSlides.forEach(slide => {
+          categories.add(slide.dataset.category);
+        });
+
+        document.getElementById("totalSlides").textContent = visibleSlides.length;
+        document.getElementById("totalCategories").textContent = categories.size;
+      }
+      updateStats();
+      // Add stagger animation to cards on load
+      slideCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // add class emfont-NotoSansTC-700 to all h3,.slide-link
+      document.querySelectorAll("h3").forEach(h3 => {
+        h3.classList.add("emfont-NotoSansTC-700");
+      });
+      document.querySelectorAll(".slide-link").forEach(link => {
+        link.classList.add("emfont-NotoSansTC-500");
+      });
+      document.querySelectorAll(".slide-category").forEach(category => {
+        category.classList.add("emfont-NotoSansTC-400");
+      });
+      document.querySelectorAll(".slide-card h3 + p").forEach(p => {
+        p.classList.add("emfont-NotoSansTC-400");
+      });
+
+      emfont.init();
+    </script>
+  </body>
 </html>

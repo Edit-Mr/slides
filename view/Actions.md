@@ -258,7 +258,7 @@ jobs:
 
 --
 
-```yaml
+```yaml" data-line-numbers="1-14|16-24|26-32|34-43
 name: Node CI
 
 on:
